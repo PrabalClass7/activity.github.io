@@ -1,0 +1,90 @@
+<html>
+<head>
+	<title>Prabal's Calculator</title>
+	<script>
+		function more(x)
+		{
+			document.getElementById("result").value+=x
+		}
+		
+		function solve()
+		{
+			document.getElementById("result").value = eval(document.getElementById("result").value)
+		}
+		
+	
+		function clr()
+		{
+			document.getElementById("result").value = ""
+		}
+	</script>
+	<style>
+		#title{
+		margin-bottom: 10px;
+		font-size:xx-large;
+		text-align:center;
+		width: 98%;
+		color:blue;
+		border: solid black 2px;
+		}
+
+		button
+		{
+		background-color:yellow;
+		font-size: x-large;
+		color: blue;
+		height: 100%;
+		border: solid black 2px;
+		width:100%
+		}
+
+		input[type="text"]
+		{
+		font-size:xx-large;
+		text-align: center;
+		background-color:blue;
+		height: 100%;
+		color: yellow;
+		border: solid black 2px;
+		width:100%
+		}
+	</style>
+</head>
+
+<body>
+	<div id="title">Prabal's Calculator</div>
+	<table border="1" width="98%" height="90%">
+		<tr>
+			<td colspan="3"><input type="text" id="result"></button></td>
+			
+			<td><button value="clear" onclick="clr()">Clear</button> </td>
+		</tr>
+		<tr>
+			
+			<td><button value="1" onclick="more('1')">1</button> </td>
+			<td><button value="2" onclick="more('2')">2</button> </td>
+			<td><button value="3" onclick="more('3')">3</button> </td>
+			<td><button value="/" onclick="more('/')">/</button> </td>
+		</tr>
+		<tr>
+			<td><button value="4" onclick="more('4')">4</button> </td>
+			<td><button value="5" onclick="more('5')">5</button> </td>
+			<td><button value="6" onclick="more('6')">6</button> </td>
+			<td><button value="-" onclick="more('-')">-</button> </td>
+		</tr>
+		<tr>
+			<td><button value="7" onclick="more('7')">7</button> </td>
+			<td><button value="8" onclick="more('8')">8</button> </td>
+			<td><button value="9" onclick="more('9')">9</button> </td>
+			<td><button value="+" onclick="more('+')">+</button> </td>
+		</tr>
+		<tr>
+			<td><button value="." onclick="more('.')">.</button> </td>
+			<td><button value="0" onclick="more('0')">0</button> </td>
+			
+			<td><button value="=" onclick="solve()">=</button> </td>
+			<td><button value="*" onclick="more('*')">*</button> </td>
+		</tr>
+	</table>
+</body>
+</html>
